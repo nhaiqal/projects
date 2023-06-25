@@ -6,15 +6,28 @@
 /*   By: sleow <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/24 09:40:47 by sleow             #+#    #+#             */
-/*   Updated: 2023/06/24 16:12:04 by sleow            ###   ########.fr       */
+/*   Updated: 2023/06/25 20:42:30 by mramlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void rush03(int, int);
+#include <stdio.h>
+#include <stdlib.h>
 
-int	main(void)
+void	rush(int x, int y);
+
+int	main(int argc, char *argv[])
 {
-	rush03(5,5);
-	return(0);
+	int	x;
+	int	y;
+	if (argc == 3)
+	{
+	
+		x = atoi(argv[1]);
+		y = atoi(argv[2]);
+		rush(x, y);
+	}
+	else
+	{
+	}
 }
 

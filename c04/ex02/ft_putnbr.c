@@ -9,6 +9,7 @@
 /*   Updated: 2023/07/09 15:17:45 by mramlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include	<unistd.h>
 
 void	ft_putchar(char c)
@@ -18,28 +19,17 @@ void	ft_putchar(char c)
 
 void	ft_putnbr(int nb)
 {
-	if (nb == -2147483648)
-	{
-		write (1, "-2147483648", 11);
-		return ;
-	}
-	if (nb < 0)
+	long	i;
+
+	i = nb;
+	if (i < 0)
 	{
 		ft_putchar('-');
-		nb = -nb;
+		i = -i;
 	}
-	if (nb / 10 != 0)
+	if (i / 10 != 0)
 	{
-		ft_putnbr(nb / 10);
+	ft_putnbr(i / 10);
 	}
-	ft_putchar('0' + (nb % 10));
+	ft_putchar('0' + (i % 10));
 }
-
-/*int	main(void)
-{
-	int	nbr;
-
-	nbr = 14748;
-	ft_putnbr(nbr);
-	return (0);
-}*/
